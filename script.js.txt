@@ -1,0 +1,28 @@
+const cart = [];
+
+function addToCart(name, price) {
+  cart.push({ name, price });
+  updateCartDisplay();
+}
+
+function updateCartDisplay() {
+  const container = document.getElementById('cart-items');
+  if (cart.length === 0) {
+    container.textContent = 'Your cart is empty.';
+    return;
+  }
+  container.innerHTML = '';
+  cart.forEach(item => {
+    const div = document.createElement('div');
+    div.textContent = `${item.name} - ₹${item.price}`;
+    container.appendChild(div);
+  });
+}
+
+function proceedToPayment() {
+  if (cart.length === 0) {
+    alert('Cart is empty!');
+    return;
+  }
+  alert('Redirecting to payment gateway...');
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhotoMaster LMS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">📸 PhotoMaster</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#cart">Cart</a>
+    </nav>
+    <div>
+      <button onclick="alert('Login clicked')">Login</button>
+      <button onclick="alert('Register clicked')">Register</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <h1>🎉 New Course Launches</h1>
+    <div class="card">📅 Mastering DSLR Basics - Launch: June 25, 2025</div>
+    <div class="card">📅 Portrait Photography - Launch: July 10, 2025</div>
+  </main>
+
+  <section id="courses">
+    <h1>📚 Courses</h1>
+    <div class="card">
+      <strong>Street Photography</strong> - ₹799
+      <button onclick="addToCart('Street Photography', 799)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <strong>Wildlife Photography</strong> - ₹999
+      <button onclick="addToCart('Wildlife Photography', 999)">Add to Cart</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h1>📷 About the Photographer</h1>
+    <p>John Doe is a globally recognized photographer with 15+ years of experience capturing portraits, wildlife, and landscapes.</p>
+  </section>
+
+  <section id="cart">
+    <h1>🛒 Your Cart</h1>
+    <div id="cart-items">Your cart is empty.</div>
+    <button onclick="proceedToPayment()">Proceed to Payment</button>
+  </section>
+
+  <footer>
+    <p>Noida. UP. 201301 | +91-9667732250</p>
+    <p>📧 photomaster@support.com | 📞 WhatsApp Help: +91-9876543210</p>
+    <p>© 2024-2025 LMS1. All rights reserved.</p>
+  </footer>
+</body>
+</html>
